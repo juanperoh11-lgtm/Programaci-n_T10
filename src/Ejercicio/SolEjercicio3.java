@@ -7,8 +7,10 @@ public class SolEjercicio3 {
 	public static void main(String[] args) {
 
 		File fDocAntigua = new File("Documentos");
-		File fFotoAntigua = new File("Documentos\\Fotografias");
-		File fLibrAntigua = new File("Documentos\\Libros");
+		// Hay que poner DOCS porque File fFotoNueva = new File("DOCS\\FOTOS") no
+		// encuentra File fFotoAntigua = new File("Documentos\\FOTOS");
+		File fFotoAntigua = new File("DOCS\\Fotografias");
+		File fLibrAntigua = new File("DOCS\\Libros");
 
 		File fDocNueva = new File("DOCS");
 		fDocAntigua.renameTo(fDocNueva);
@@ -19,6 +21,8 @@ public class SolEjercicio3 {
 		File fLibrNueva = new File("DOCS\\LECTURAS");
 		fLibrAntigua.renameTo(fLibrNueva);
 
+		// Tiene que ser fFotoNevo en lugar de fFotoAntigua porque se ha cambiado el
+		// nombre y fFotoAntigua sique apuntando a la Antigua
 		quitarExtension(fFotoAntigua);
 
 	}
