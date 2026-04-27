@@ -30,7 +30,7 @@ public class Ejercicio10 {
 					Npalabras += palabras.length;
 
 					for (String p : palabras) {
-						// Limpiamos la palabra: a minúsculas y quitamos signos de puntuación
+						// Limpiamos la palabra, la ponemos a minúsculas y quitamos signos de puntuación
 						String limpia = p.toLowerCase().replaceAll("[^a-záéíóúñ]", "");
 
 						if (!limpia.isEmpty()) {
@@ -65,7 +65,7 @@ public class Ejercicio10 {
 			return;
 		}
 
-		// 1. Encontrar la frecuencia máxima recorriendo los valores
+		// Encontrar la frecuencia máxima recorriendo los valores
 		int maxFrecuencia = 0;
 		for (String palabra : mapa.keySet()) {
 			int frecuencia = mapa.get(palabra);
@@ -74,19 +74,21 @@ public class Ejercicio10 {
 			}
 		}
 
-		// 2. Mostrar todas las palabras que tengan esa frecuencia máxima
+		// Mostrar todas las palabras que tengan esa frecuencia máxima
 		System.out.println("Frecuencia máxima: " + maxFrecuencia);
 		System.out.print("Palabra(s) más común(es): ");
 
 		boolean primero = true;
 		for (String palabra : mapa.keySet()) {
+			
 			if (mapa.get(palabra) == maxFrecuencia) {
 				if (!primero)
 					System.out.print(", ");
+				
 				System.out.print(palabra);
 				primero = false;
 			}
 		}
-		System.out.println(); // Salto de línea final
+		System.out.println(); 
 	}
 }
