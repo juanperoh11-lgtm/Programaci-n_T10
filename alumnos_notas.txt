@@ -1,0 +1,5 @@
+Juan Perez,8.5
+Maria Garcia,9.2
+Carlos Lopez,6.7
+Ana Belen,7.0
+Luis Martinez,5.5
