@@ -13,6 +13,7 @@ public class Ejercicio14 {
 		try {
 			br = new BufferedReader(new FileReader(ruta));
 			String nombre;
+			int contL =1;
 
 			while ((nombre = br.readLine()) != null) {
 				try {
@@ -29,10 +30,8 @@ public class Ejercicio14 {
 					Producto p = new Producto(nombre, cantidad, precio);
 					System.out.println(p.toString());
 
-				} catch (IOException e) {
-					System.out.println("Error: " + e.getMessage());
 				} catch (Exception e) {
-					System.out.println("Error: " + e.getMessage());
+					System.out.println("Hublo un eror en la linea " + contL + " : "+   e.getMessage());
 				}
 			}
 		} catch (IOException e) {
