@@ -112,18 +112,54 @@ public class Main {
 					}
 				}
 				break;
-		
+
 			case 4:
 				System.out.println("Titulo: ");
+				String titulo = sc.nextLine();
 				System.out.println("Autor: ");
+				String autor = sc.nextLine();
 				System.out.println("ISBN: ");
+				String codigo = sc.nextLine();
 				System.out.println("Anyo: ");
+				String anyo = sc.nextLine();
 				System.out.println("Edicion: ");
+				String edicion = sc.nextLine();
+
+				try {
+
+					biblioteca.add(new Libro(titulo, autor, codigo, anyo, edicion, "Disponible"));
+					System.out.println("Revista añadida correctamente.");
+
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+
+				break;
+
+			case 5:
 				System.out.println("Titulo: ");
-				
+				String tituloR = sc.nextLine();
+				System.out.println("Autor: ");
+				String autorR = sc.nextLine();
+				System.out.println("ISBN: ");
+				String codigoR = sc.nextLine();
+				System.out.println("Anyo: ");
+				String anyoR = sc.nextLine();
+				System.out.println("Edicion: ");
+				String edicionR = sc.nextLine();
+
+				try {
+					biblioteca.add(new Revista(tituloR, autorR, codigoR, anyoR, edicionR, "Disponible"));
+					System.out.println("Revista añadida correctamente.");
+
+				} catch (Exception e) {
+					System.out.println(e.getMessage());
+				}
+				break;
+
 			}
 
-		} while (op != 4);
+		} while (op != 6);
 		sc.close();
 
 	}
