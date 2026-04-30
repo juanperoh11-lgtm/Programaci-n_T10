@@ -10,9 +10,9 @@ public class Ejercicio5 {
 		String ruta = "primos.txt";
 		final int limite = 500;
 		BufferedWriter bw = null;
-		
+
 		try {
-			bw  = new BufferedWriter(new FileWriter(ruta));
+			bw = new BufferedWriter(new FileWriter(ruta));
 			for (int i = 1; i < limite; i++) {
 				if (esPrimo(i)) {
 					bw.write(String.valueOf(i));
@@ -26,10 +26,10 @@ public class Ejercicio5 {
 			System.out.println("Error: " + ioe.getMessage());
 		} finally {
 			try {
-				if(bw != null) {
+				if (bw != null) {
 					bw.close();
 				}
-			}catch(IOException e) {
+			} catch (IOException e) {
 				System.out.println("Error");
 			}
 		}
