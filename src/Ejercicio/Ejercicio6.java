@@ -26,7 +26,6 @@ public class Ejercicio6 {
 					br.close();
 				}
 			}catch(IOException e) {
-				System.out.println("Error al cerrar el lector");
 			}
 		}
 		
