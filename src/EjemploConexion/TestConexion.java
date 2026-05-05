@@ -9,10 +9,9 @@ public class TestConexion {
 
 	private static final String URL = "jdbc:mysql://localhost:3306/tienda";
 	private static final String USUARIO = "root";
-	private static final String PASSWORD = ""; // vacía en XAMPP local
+	private static final String PASSWORD = "";
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		// try-with-resources: cierra la conexión automáticamente al terminar
 		try (Connection conn = DriverManager.getConnection(URL, USUARIO, PASSWORD);
@@ -21,6 +20,7 @@ public class TestConexion {
 			
 			 {
 				// CREATE TABLE IF NOT EXISTS → no falla si ya existe
+				//Crear tablas
 				stmt.execute(
 				"CREATE TABLE IF NOT EXISTS cliente (" +
 				" id INT AUTO_INCREMENT PRIMARY KEY, " +
